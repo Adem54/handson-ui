@@ -1,0 +1,18 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" loaded="onLoad" actionBarHidden="true">
+
+<GridLayout class="wrapper" rows="*, *">
+  <StackLayout class="border-red" row="0">
+    <Label text="Hello" loaded="onLoaded" class="border-red"/>
+    <button text="InnerTap" style="background-color:yellow; margin-top:20;" />
+  </StackLayout>
+  <StackLayout row="1">
+     <button text="OuterTap"    isEnabled="false"  />
+     <button text="OuterTap"  myAttribute="true" />
+  </StackLayout>
+</GridLayout>
+</Page>
+<!--
+Css selectorleri arasindaki, hiyerarsik yapi ayni web-css deki gibidr, hicbir farki yoktur
+-->
+
+

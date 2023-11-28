@@ -1,6 +1,21 @@
 ﻿@import '@nativescript/theme/css/core.css';
 @import '@nativescript/theme/css/default.css';
 
+
 Button.-primary {
   font-size: 18;
+}
+
+/* Tam uzerinde tikladgimizda, bir anlik krimizi olur, sonra tekrar eski rengine doner*/
+button.btn:highlighted {
+  background-color: tomato;
+  color: #fff;
+}
+
+.my-red-bg {
+  background-color: red;
+}
+
+.color-green {
+  color: green;
 }

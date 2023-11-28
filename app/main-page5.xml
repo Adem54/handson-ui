@@ -1,0 +1,17 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" loaded="onLoad" actionBarHidden="true">
+  <stack-layout>
+    <Label text="Hello"/>
+      <AbsoluteLayout clipToBounds="false">
+        <button text="InnerTap" />
+      </AbsoluteLayout>
+
+       <Label text="&#xe902;" class="icon"/>
+       <Label text="&#xe951;" class="icon2"/>
+
+
+
+  </stack-layout>
+
+</Page>
+
+

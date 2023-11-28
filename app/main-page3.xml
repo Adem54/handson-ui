@@ -1,0 +1,54 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" loaded="onLoad">
+<ActionBar>
+  <GridLayout columns="auto, *" width="100%" >
+    <Image col='0' src="~/images/castle.jpg" width="40" height="40" />
+    <Label col='1' text="Custom Title" fontSize="24" />
+  </GridLayout>
+</ActionBar>
+
+ <TabView
+  loaded="onLoaded"
+  selectedIndex="{{tabSelectedIndex}}"
+  selectedIndexChanged="onSelectedIndexChanged"
+  androidTabsPosition="bottom"
+  androidOffscreenTabLimit="0"
+>
+  <TabViewItem title="Profile">
+    <StackLayout>
+      <Label
+        text="{{ tabSelectedIndexResult }}"
+        class="h2 m-t-16 text-center"
+        textWrap="true"
+      />
+      <Button text="Change Tab" tap="changeTab" class="btn btn-primary btn-active" />
+    </StackLayout>
+  </TabViewItem>
+  <TabViewItem title="Stats">
+    <StackLayout>
+      <Label
+        text="{{ tabSelectedIndexResult }}"
+        class="h2 m-t-16 text-center"
+        textWrap="true"
+      />
+      <Button text="Change Tab" tap="changeTab" class="btn btn-primary btn-active" />
+    </StackLayout>
+  </TabViewItem>
+  <TabViewItem title="Settings">
+    <StackLayout>
+      <Label
+        text="{{ tabSelectedIndexResult }}"
+        class="h2 m-t-16 text-center"
+        textWrap="true"
+      />
+      <Button text="Change Tab" tap="changeTab" class="btn btn-primary btn-active" />
+    </StackLayout>
+  </TabViewItem>
+</TabView>
+
+
+
+
+</Page>
+
+
+

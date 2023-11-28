@@ -3,13 +3,50 @@ import { Observable } from '@nativescript/core'
 export class HelloWorldModel extends Observable {
   private _counter: number
   private _message: string
+  private _longText:string;
+  private _isChecked:boolean;
+
+  /*
+    let text = "Hello this is my long text, and I check this text. I think, this is very useful!"
+  vm.set("longText", text);
+  vm.set("isChecked", false);
+  */
 
   constructor() {
     super()
 
     // Initialize default values.
-    this._counter = 42
-    this.updateMessage()
+    this._counter = 42;
+    this._longText = "Hello this is my long text, and I check this text. I think, this is very useful!";
+    this._isChecked=false;
+    this.updateMessage();
+  }
+
+  get longText():string {
+    return this._longText;
+  }
+
+  set longText(value:string){
+    if(value !== this._longText)
+     {
+        this._longText = value;
+        this.notifyPropertyChange("longText", value);
+     }
+
+  }
+
+  get isChecked():boolean
+  {
+    return this._isChecked;
+  }
+
+  set isChecked(value:boolean)
+  {
+    if(this._isChecked !== value)
+    {
+      this._isChecked = value;
+      this.notifyPropertyChange("isChecked", value);
+    }
   }
 
   get message(): string {

@@ -1,0 +1,71 @@
+GridLayout
+{
+    border-color:red;
+    border-width: 3;
+}
+
+Label {
+    color:tomato;
+    font-weight: bold;
+    font-size:16px;
+    height: 50;
+    width: 100;
+    background-color: aqua;
+
+
+}
+
+.wrapper {
+    border-color:pink;
+    border-width: 5;
+
+}
+
+/* .wrapper class i altindaki tum buttonlar
+.wrapper button {
+    background-color: blue;
+}
+*/
+/* .wrapper class inin hemen bir altindaki button*/
+.wrapper > button {
+    background-color: blue;
+}
+/* Bu sekilde ayni css deki gibi attribute ler i kullanarak da harika css kodlari yazabiliriz..Burda suna dikkat edelim..nativescriptte bir buttonda biz isEnabled attributunu direk yazmasak bile zaten isEnabled default olarak o button in bir parcasidir, default olarak true dur..Ondan dolayi css de bu sekilde attribute u kullanarak yazdigmz koddan icinde dogrudan yazmadigmiz button da etkileniyor..Yani o zaman default olarak nativescirpt etiketlerinde kullanabilecegimz attribute ler i kullanarak,, css kodlari yazabiliuyoruz, biz direk tanimlayarak, default degerini degistirmesek bile.... */
+button[isEnabled]
+{
+    background-color: aqua;
+    color:tomato;
+}
+/*
+    CUSTOM ATTRIBUTE LER I KULLANMAK!
+Attribute konusunda cok kritik bir nokta var, nativescriptte o da biz kendi custom attribute lerimizi olusturabiliyoruz....BU HARIKA BIRSEY BIZE COK CIDDI BIR ALAN ACIYOR!!!!BU KONUYU IYI BILMELIYIZ!!!!
+Ozellikle custom attribute ler ile id leri tutabilmek icin cok efektif bir yontemdir
+
+Asagidaki ornekte gordgumz gibi, custom attributu hangi button da kullanirsak sadece o etiklenmis oluyor!!!!
+*/
+
+button[myAttribute]
+{
+    background-color: blueviolet;
+}
+
+/*Buttona tikladigmzda ve uzerinde tiklayarak tuttugumuzda rengi asagidaki gibi olacaktir(Ios-Android de de bu sekildedir)*/
+button:highlighted {
+
+    background-color: burlywood;
+}
+
+/*button:disabled icerisinde isEnabled default attributu false ise uygulanacaktir ama bu android de sorunsuz calisirken, ios da calismayacaktir, ios da calismama sebebi ise button:highlighted ile birbirine girdikleri icindir, eger button:highlighted i kaldirirsak o zaman ios da da button:disabled in duzgun bir sekilde calistgini gorebiliriz!!!!
+Eer ios da da kullanici butona tiklayinca butonu farkli renkte gostermek istersek o zamand a gidp codebehindda touch-tap eventi icinde style a mudahele ederek yapaibiliriz
+Ayrica highlighted yerine pressed pseudo elementi ile de kullanabilirz, pressed hicbirsorun olmadan, ve disabled ile de cakismyacak sekilde calsiiyor ios cihazlarda da
+button:pressed {
+
+    background-color: burlywood;
+}
+
+*/
+button:disabled {
+    background-color: black;
+    color:white;
+}
+

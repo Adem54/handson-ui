@@ -1,0 +1,6 @@
+<!--
+    Custom componenttte top level Page xml markup olmasina gerek yok
+    -->
+    <FlexboxLayout>
+        <Button text="Tap custom button" style="color:red;" />
+    </FlexboxLayout>

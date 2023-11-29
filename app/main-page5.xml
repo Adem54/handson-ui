@@ -1,7 +1,16 @@
-<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo"  actionBarHidden="true">
+<Page
+xmlns="http://schemas.nativescript.org/tns.xsd"
+xmlns:cats="components/mybutton"
+ navigatingTo="onNavigatingTo"  actionBarHidden="true">
 
   <StackLayout>
        <Label text="Hello world" loaded="onLoaded" class="my-lbl"/>
+       <!--
+        namespace i ns koydgumz icin artik ns: diye yazacagiz xml deki namespace leri ama ornegin ns yerine cat yazsa idik o zaman cat: diye yazacaktik
+        -->
+       <cats:mybutton>
+
+       </cats:mybutton>
   </StackLayout>
 </Page>
 <!--

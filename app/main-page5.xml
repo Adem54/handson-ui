@@ -1,17 +1,26 @@
-<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" loaded="onLoad" actionBarHidden="true">
-  <stack-layout>
-    <Label text="Hello"/>
-      <AbsoluteLayout clipToBounds="false">
-        <button text="InnerTap" />
-      </AbsoluteLayout>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo"  actionBarHidden="true">
 
-       <Label text="&#xe902;" class="icon"/>
-       <Label text="&#xe951;" class="icon2"/>
-
-
-
-  </stack-layout>
-
+  <StackLayout>
+       <Label text="Hello world" loaded="onLoaded" class="my-lbl"/>
+  </StackLayout>
 </Page>
+<!--
+  ios e ozel bir css dosyasi olusturabilioruz xml sayfasi ile ayni isimde olmasi gereken css dosyasmiz ios a ozel yaparken
+    main-page5.xml
+    main-page5.ts
+    main-page5.css
+  normalde bu sekilde olur
+
+    main-page5.xml
+    main-page5.ts
+    main-page5.ios.css
+    main-page5.android.css
+ bu css dosyasi ios cihazlarda calisirken basindaki ios kismini atarak okuyor nativescript otomatik olarak
+ ayni sekilde de main-page5.android.css sadece android cihazlarda main-page.css olarak okunacaktir
+ Bunlar tabi nativescript cli tarafindan suffix-sonlarina eklenen ios-android kismi kaldirilarak okunuyor.
+
+ Proje dosyamizin icerisinde platforms isimli bir klasor vardir. Bu klasor ile oynamak biraz tehlikeli olabilir eger yanlislikla birseyler degistirilirse, platform dosyalari arasinda yanmlislikla degisikliklik yaparsak,  bizim xml-ts-css de yaptgimz platform specific kodlar calismayabilir.Platofrms klasoru icindekiler platform specific yazdigmz islemlerin ciktisidir ve platforms klasoru icinde olusturulur
+
+  -->
 
 
